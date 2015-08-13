@@ -92,7 +92,6 @@
 				B5E819FC1B7A41B500FDB2DC /* ViewController.m */,
 				B5E81A1A1B7CDE0300FDB2DC /* NSString+NumberWithComma.h */,
 				B5E81A1B1B7CDE0300FDB2DC /* NSString+NumberWithComma.m */,
-				B56095A61B7CFFC200DCD750 /* example.png */,
 				B5E819FE1B7A41B500FDB2DC /* Main.storyboard */,
 				B5E81A011B7A41B500FDB2DC /* Images.xcassets */,
 				B5E81A031B7A41B500FDB2DC /* LaunchScreen.xib */,
@@ -104,6 +103,7 @@
 		B5E819F41B7A41B500FDB2DC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B56095A61B7CFFC200DCD750 /* example.png */,
 				B5E819F51B7A41B500FDB2DC /* Info.plist */,
 				B5E819F61B7A41B500FDB2DC /* main.m */,
 			);
