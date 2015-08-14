@@ -18,8 +18,6 @@
 
 @end
 
-// 输入框加上动画
-
 
 @implementation ViewController
 
@@ -37,6 +35,7 @@
 
 - (IBAction)btnAction:(id)sender {
     
+    // 处理并展示输入的字符串
     self.showLabel.text = [_textField.text numberWithComma:_textField.text];
     [_textField resignFirstResponder];
 }
@@ -45,6 +44,7 @@
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
     
+    // 处理并展示输入的字符串
     self.showLabel.text = [textField.text numberWithComma:textField.text];
 
 }
