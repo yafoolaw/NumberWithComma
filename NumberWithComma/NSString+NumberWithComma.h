@@ -17,6 +17,6 @@
  *
  *  @return 返回以","分割的数字字符串
  */
-- (NSString*)numberWithComma:(NSString*)numberString;
++ (NSString*)numberWithComma:(NSString*)numberString;
 
 @end

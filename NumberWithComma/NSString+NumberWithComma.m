@@ -10,7 +10,7 @@
 
 @implementation NSString (NumberWithComma)
 
-- (NSString*)numberWithComma:(NSString*)numberString {
++ (NSString*)numberWithComma:(NSString*)numberString {
     
     // nil 返回@""
     if (!numberString) {
