@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B5A65EF01B83136F0068335E /* NSString+StringOfNumberAddComma.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A65EEF1B83136F0068335E /* NSString+StringOfNumberAddComma.m */; };
 		B5E819F71B7A41B500FDB2DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E819F61B7A41B500FDB2DC /* main.m */; };
 		B5E819FA1B7A41B500FDB2DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E819F91B7A41B500FDB2DC /* AppDelegate.m */; };
 		B5E819FD1B7A41B500FDB2DC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E819FC1B7A41B500FDB2DC /* ViewController.m */; };
@@ -14,7 +15,6 @@
 		B5E81A021B7A41B500FDB2DC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5E81A011B7A41B500FDB2DC /* Images.xcassets */; };
 		B5E81A051B7A41B500FDB2DC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5E81A031B7A41B500FDB2DC /* LaunchScreen.xib */; };
 		B5E81A111B7A41B500FDB2DC /* NumberWithCommaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E81A101B7A41B500FDB2DC /* NumberWithCommaTests.m */; };
-		B5E81A1C1B7CDE0300FDB2DC /* NSString+NumberWithComma.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E81A1B1B7CDE0300FDB2DC /* NSString+NumberWithComma.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B5A65EEE1B83136F0068335E /* NSString+StringOfNumberAddComma.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+StringOfNumberAddComma.h"; sourceTree = "<group>"; };
+		B5A65EEF1B83136F0068335E /* NSString+StringOfNumberAddComma.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+StringOfNumberAddComma.m"; sourceTree = "<group>"; };
 		B5E819F11B7A41B500FDB2DC /* NumberWithComma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumberWithComma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E819F51B7A41B500FDB2DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5E819F61B7A41B500FDB2DC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -41,8 +43,6 @@
 		B5E81A0A1B7A41B500FDB2DC /* NumberWithCommaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumberWithCommaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E81A0F1B7A41B500FDB2DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5E81A101B7A41B500FDB2DC /* NumberWithCommaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NumberWithCommaTests.m; sourceTree = "<group>"; };
-		B5E81A1A1B7CDE0300FDB2DC /* NSString+NumberWithComma.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NumberWithComma.h"; sourceTree = "<group>"; };
-		B5E81A1B1B7CDE0300FDB2DC /* NSString+NumberWithComma.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NumberWithComma.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +88,8 @@
 				B5E819F91B7A41B500FDB2DC /* AppDelegate.m */,
 				B5E819FB1B7A41B500FDB2DC /* ViewController.h */,
 				B5E819FC1B7A41B500FDB2DC /* ViewController.m */,
-				B5E81A1A1B7CDE0300FDB2DC /* NSString+NumberWithComma.h */,
-				B5E81A1B1B7CDE0300FDB2DC /* NSString+NumberWithComma.m */,
+				B5A65EEE1B83136F0068335E /* NSString+StringOfNumberAddComma.h */,
+				B5A65EEF1B83136F0068335E /* NSString+StringOfNumberAddComma.m */,
 				B5E819FE1B7A41B500FDB2DC /* Main.storyboard */,
 				B5E81A011B7A41B500FDB2DC /* Images.xcassets */,
 				B5E81A031B7A41B500FDB2DC /* LaunchScreen.xib */,
@@ -226,8 +226,8 @@
 			files = (
 				B5E819FD1B7A41B500FDB2DC /* ViewController.m in Sources */,
 				B5E819FA1B7A41B500FDB2DC /* AppDelegate.m in Sources */,
-				B5E81A1C1B7CDE0300FDB2DC /* NSString+NumberWithComma.m in Sources */,
 				B5E819F71B7A41B500FDB2DC /* main.m in Sources */,
+				B5A65EF01B83136F0068335E /* NSString+StringOfNumberAddComma.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

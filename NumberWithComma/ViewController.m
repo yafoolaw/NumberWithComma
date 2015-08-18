@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "NSString+NumberWithComma.h"
+#import "NSString+StringOfNumberAddComma.h"
 
 @interface ViewController ()<UITextFieldDelegate>
 
@@ -36,7 +36,7 @@
 - (IBAction)btnAction:(id)sender {
     
     // 处理并展示输入的字符串
-    self.showLabel.text = [NSString numberWithComma:_textField.text];
+    self.showLabel.text = [_textField.text stringOfNumberAddComma];
     [_textField resignFirstResponder];
 }
 
@@ -45,7 +45,7 @@
 - (void)textFieldDidEndEditing:(UITextField *)textField {
     
     // 处理并展示输入的字符串
-    self.showLabel.text = [NSString numberWithComma:textField.text];
+    self.showLabel.text = [textField.text stringOfNumberAddComma];
 
 }
 

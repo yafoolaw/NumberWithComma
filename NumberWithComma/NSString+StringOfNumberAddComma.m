@@ -1,45 +1,45 @@
 //
-//  NSString+NumberWithComma.m
+//  NSString+StringOfNumberAddComma.m
 //  NumberWithComma
 //
-//  Created by FrankLiu on 15/8/13.
+//  Created by FrankLiu on 15/8/18.
 //  Copyright (c) 2015年 FrankLiu. All rights reserved.
 //
 
-#import "NSString+NumberWithComma.h"
+#import "NSString+StringOfNumberAddComma.h"
 
-@implementation NSString (NumberWithComma)
+@implementation NSString (StringOfNumberAddComma)
 
-+ (NSString*)numberWithComma:(NSString*)numberString {
-    
+- (NSString*)stringOfNumberAddComma {
+
     // nil 返回@""
-    if (!numberString) {
+    if (!self) {
         
         return @"";
         // 如果含有","直接返回
-    } else if ([numberString rangeOfString:@","].length >0) {
+    } else if ([self rangeOfString:@","].length >0) {
         
-        return numberString;
+        return self;
     }
     
-    // 以非0数字开头,可以包含小数点的数字
-    NSString *regexStr = @"[1-9]\\d*.?\\d+";
+    // 以"+","-",或非0数字开头,可以包含小数点的数字
+    NSString *regexStr = @"[+-]?[1-9]\\d*.?\\d+";
     
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"self matches %@",regexStr];
     
     // 一些不符合基本数字规则的,直接返回
-    if ([predicate evaluateWithObject:numberString] == NO) {
+    if ([predicate evaluateWithObject:self] == NO) {
         
-        return numberString;
+        return self;
     }
     
-     /* 开始处理正常的数字字符串*/
+    /* 开始处理正常的数字字符串*/
     NSMutableArray *componentArray = [NSMutableArray array];
     
     // 如果有小数点
-    if ([numberString rangeOfString:@"."].length != 0) {
+    if ([self rangeOfString:@"."].length != 0) {
         
-        NSArray *separateArray = [numberString componentsSeparatedByString:@"."];
+        NSArray *separateArray = [self componentsSeparatedByString:@"."];
         
         // 如果是小数
         if (separateArray.count == 2) {
@@ -50,11 +50,27 @@
             // 否则直接返回
         } else {
             
-            return numberString;
+            return self;
         }
     }
     
-    long long number = [numberString longLongValue];
+    // 如果以"+" "-"开头,暂时去掉
+    BOOL hasPlusPrefix  = NO;
+    BOOL hasMinusPrefix = NO;
+    NSString *selfStr = self;
+    
+    if ([self hasPrefix:@"+"]) {
+        
+        hasPlusPrefix = YES;
+        selfStr = [self substringFromIndex:1];
+        
+    } else if ([self hasPrefix:@"-"]){
+        
+        hasMinusPrefix = YES;
+        selfStr = [self substringFromIndex:1];
+    }
+    
+    long long number = [selfStr longLongValue];
     
     // 分离各个整数位数字
     do {
@@ -91,7 +107,19 @@
         [tempStr appendString:componentArray[i]];
     }
     
+    // 如果以"+" "-"开头,补上
+    if (hasPlusPrefix) {
+        
+        return [NSString stringWithFormat:@"+%@",tempStr];
+        
+    } else if (hasMinusPrefix) {
+        
+        return [NSString stringWithFormat:@"-%@",tempStr];
+    }
+    
     return tempStr;
+    
+    
 }
 
 @end
